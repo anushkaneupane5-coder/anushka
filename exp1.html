@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Implementation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>jQuery Example</h3>
+    <div id="box">Hello</div>
+
+    <button id="textBtn">Change Text</button>
+    <button id="colorBtn">Change Color</button>
+    <button id="moveBtn">Move Box</button>
+
+    <script>
+        $(document).ready(function(){
+
+            // Event Handling and DOM Manipulation
+            $("#textBtn").click(function(){
+                $("#box").text("Welcome!");
+            });
+
+            $("#colorBtn").click(function(){
+                $("#box").css("background-color", "lightgreen");
+            });
+
+            // Animation Example
+            $("#moveBtn").click(function(){
+                $("#box").animate({marginLeft: '200px'}, 1000);
+            });
+
+        });
+    </script>
+
+</body>
+</html>
